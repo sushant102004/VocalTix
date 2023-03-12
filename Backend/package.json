@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/sushant102004/VocalTix/issues"
   },
-  "homepage": "https://github.com/sushant102004/VocalTix#readme"
+  "homepage": "https://github.com/sushant102004/VocalTix#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
