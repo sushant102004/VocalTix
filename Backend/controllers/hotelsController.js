@@ -25,8 +25,8 @@ exports.addHotel = async (req, res) => {
 }
 
 
-exports.searchHotel = async (req, res, next) => {
-    const searchQuery = req.params.searchText
+exports.searchHotel = async (req, res) => {
+    const searchQuery = req.params.searchQuery
     if(!searchQuery) {
         return res.status(404).json({
             status: 'not-found',
@@ -39,7 +39,7 @@ exports.searchHotel = async (req, res, next) => {
         ]
     })
 
-    if(!hotels) {
+    if(hotels.length === 0) {
         return res.status(404).json({
             status: 'not-found',
             message: 'Hotels not found.'
