@@ -4,6 +4,7 @@
   "description": "The app is a voice-activated hotel booking platform, enabling users to search and reserve lodging accommodations using natural language voice commands without the need to type on a keyboard.",
   "main": "index.js",
   "scripts": {
+    "start" : "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
