@@ -23,3 +23,31 @@ exports.addHotel = async (req, res) => {
         hotel: newHotel
     })
 }
+
+
+exports.searchHotel = async (req, res, next) => {
+    const searchQuery = req.params.searchText
+    if(!searchQuery) {
+        return res.status(404).json({
+            status: 'not-found',
+            message: 'Search Query not found.'
+        })
+    }
+    const hotels = await Hotel.find({
+        '$or': [
+            { 'location'  : { $regex: searchQuery, '$options' : 'i' }}
+        ]
+    })
+
+    if(!hotels) {
+        return res.status(404).json({
+            status: 'not-found',
+            message: 'Hotels not found.'
+        })
+    }
+
+    res.status(200).json({
+        status: 'success',
+        hotels: hotels
+    })
+}
