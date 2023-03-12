@@ -7,7 +7,7 @@ This is a voice-based travel booking app designed for users who want to book the
 <li>Search for flights, hotels, and rental cars using natural language voice commands.</li>
 <li>Make bookings using voice commands.</li>
 <li>View and manage existing bookings.</li>
-<li>Integration with popular travel booking APIs for up-to-date information.</li>
+<li>Integration with popular hotel booking APIs for up-to-date information.</li>
 </ul>
 
 ## Dependencies
